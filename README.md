@@ -32,6 +32,13 @@ opt.opt    == { a: 1, b: true, c: "hello world", d: true }
 opt.argv   == ["foo", "bar"]
 ```
 
+Full-featured test suite
+------------------------
+```js
+#!/usr/bin/env node
+console.log(require("./opt.js")());
+```
+
 License
 -------
 NASA Open Source Agreement v1.3
