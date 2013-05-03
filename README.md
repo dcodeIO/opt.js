@@ -1,6 +1,6 @@
 ![opt.js](https://raw.github.com/dcodeIO/opt.js/master/opt.png)
 ======
-Probably the tiniest command line option parser you can <s>npm install optjs</s> Ctrl+C, Ctrl+V. Proof:
+Probably the tiniest command line option parser you can <del>npm install optjs</del> Ctrl+C, Ctrl+V. Proof:
 
 ```js
 function opt(argv) {
