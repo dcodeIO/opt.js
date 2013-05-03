@@ -1,0 +1,8 @@
+{
+    "name": "optjs",
+    "description": "Probably the tiniest command line option parser you can Ctrl+C, Ctrl+V.",
+    "version": "3.2.1-boom",
+    "author": "Daniel Wirtz <dcode@dcode.io>",
+    "main": "./opt.js",
+    "license": "NASA-1.3"
+}
