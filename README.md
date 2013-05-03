@@ -1,15 +1,12 @@
 ![opt.js](https://raw.github.com/dcodeIO/opt.js/master/opt.png)
 ======
-Probably the tiniest command line option parser you can <del>`npm install optjs`</del> Ctrl+C, Ctrl+V. Proof:
+Probably the sole command line option parser you'll ever need to <del>`npm install optjs`</del> Ctrl+C, Ctrl+V. Proof:
 
 ```js
 function opt(argv) {
-    argv = argv || process.argv;
-    var remain = [], opt = {}, arg, p;
-    for (var i=2; i<argv.length; i++) (arg = argv[i]).charAt(0) == '-'
-         ? ((p=(arg=arg.replace(/^[\-]+/,'')).indexOf("="))>0?opt[arg.substring(0,p)]=arg.substring(p+1):opt[arg]=true)
-         : remain.push(arg);
-    return { 'node': argv[0], 'script': argv[1], 'argv': remain, 'opt': opt };
+    var opt={},arg,p;argv=Array.prototype.slice.call(argv||process.argv);for(var i=2;i<argv.length;i++)if(argv[i].charAt(0)=='-')
+    ((p=(arg=(""+argv.splice(i--,1)).replace(/^[\-]+/,'')).indexOf("="))>0?opt[arg.substring(0,p)]=arg.substring(p+1):opt[arg]=true);
+    return {'node':argv[0],'script':argv[1],'argv':argv.slice(2),'opt':opt};
 }
 ```
 
